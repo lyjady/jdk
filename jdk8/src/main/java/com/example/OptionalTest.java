@@ -49,8 +49,9 @@ public class OptionalTest {
     public static List<Integer> getStudentIds() {
         List<Integer> ids = Arrays.asList(1, 2, 3, 4, 5);
         Student student = new Student();
-//        student.setIds(ids);
+        student.setIds(ids);
         Optional<Student> optional = Optional.of(student);
         return optional.map(Student::getIds).orElseGet(ArrayList::new);
+//        return optional.map(Student::getIds).orElse(new ArrayList<>());
     }
 }
