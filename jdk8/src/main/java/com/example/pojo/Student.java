@@ -46,6 +46,14 @@ public class Student {
         this.ids = ids;
     }
 
+    public static int computerAge(Student s1, Student s2) {
+        return s1.getAge() - s2.getAge();
+    }
+
+    public int computerName(Student s2) {
+        return this.getName().length() - s2.getName().length();
+    }
+
     @Override
     public String toString() {
         return "Student{" +

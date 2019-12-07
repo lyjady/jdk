@@ -1,4 +1,4 @@
-package com.example;
+package com.example.lambda;
 
 import java.util.Comparator;
 import java.util.function.BinaryOperator;
