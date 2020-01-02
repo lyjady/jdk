@@ -25,12 +25,12 @@ public class Test2 {
         String date2Str = formatter.format(LocalDateTime.now());
         System.out.println(date2Str);
 
-        //3.LocalDateTime -> Date (LocalDateTime -> String -> Date)
+        //3.Date -> LocalDateTime (Date -> String -> LocalDateTime)
         Date date = new Date();
         LocalDateTime localDateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
         System.out.println(localDateTime);
 
-        //4.Date -> LocalDateTime (Date -> String -> LocalDateTime)
+        //4.LocalDateTime -> Date (LocalDateTime -> String -> Date)
         Date from = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         System.out.println(from);
     }
